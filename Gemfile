@@ -22,6 +22,10 @@ end
 
 gem 'jquery-rails'
 
+# Gems for Frontend Design
+
+gem 'bootstrap-sass'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
