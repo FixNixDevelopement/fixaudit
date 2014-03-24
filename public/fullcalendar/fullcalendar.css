@@ -72,6 +72,7 @@ html .fc,
 
 .fc-header .fc-button {
 	margin-right: -1px;
+	
 	}
 	
 .fc-header .fc-corner-right,  /* non-theme */
@@ -136,14 +137,23 @@ html .fc,
 ------------------------------------------------------------------------*/
 
 .fc-button {
-	position: relative;
 	display: inline-block;
-	padding: 0 .6em;
-	overflow: hidden;
-	height: 1.9em;
-	line-height: 1.9em;
-	white-space: nowrap;
-	cursor: pointer;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
 	}
 	
 .fc-state-default { /* non-theme */
@@ -175,6 +185,7 @@ html .fc,
 .fc-button-prev .fc-text-arrow,
 .fc-button-next .fc-text-arrow { /* for &lsaquo; &rsaquo; */
 	font-weight: bold;
+
 	}
 	
 /* icon (for jquery ui) */

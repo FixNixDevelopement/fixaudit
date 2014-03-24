@@ -4,47 +4,46 @@
 	<script type="text/javascript">
 	$(document).ready(function(){
 		$('#calendar').fullCalendar({
-  
-  // put all your fullcalendar configuration here.
+			height: 650,
 			header: {
 				left: 'prev,next today',
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay'
 			},
+			buttonIcon: {
+				prev: 'circle-triangle-w',
+    			next: 'circle-triangle-e'
+			},
 			buttonText: {
-				prev: 'prev',
-				next: 'next'
+				month: 'Month',
+				agendaWeek: 'Week',
+				agendaDay: 'Day',
+				today: 'Today'
 			},
 			firstDay: 1, 
 			isRTL :false,
 			// hiddenDays : [0,6],
 			weekMode : 'variable',
 			weekNumbers : false,
-			handleWindowResize :false,
+			handleWindowResize :true,
 			allDaySlot: true,
-			allDayText: 'today',
+			allDayText: 'Today',
 			year: 2015,
 			month: 3
 
 		});
 	});
-	function getView() {
-		var view = $('#calendar').fullCalendar('getView');
-		alert("Month is " + view.title);
-	}
 	</script>
 </head>
 <body>
-	        <div id ='header'>
-	        <%= render :partial => "layouts/menu" %>
-	        </div>
-			<div id='calendar'></div>
-			<button onclick="getView()">getView</button>
-			<button onclick="$('#calendar').fullCalendar('changeView', 'basicDay')">change to basicDay
-			</button>
-		<!-- </div>
+
+	<!-- Rendering menu  -->
+	<%= render :partial => "layouts/menu" %>
+
+	<!-- Calendar Section -->
+	<div id='calendar'>
 	</div>
-</div> -->
+	<!-- End of Calendar -->
 
 </body>
 </html>
