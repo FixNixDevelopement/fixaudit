@@ -1,6 +1,9 @@
 Fixaudit::Application.routes.draw do
+  get "calendar/index"
+
   get "dashboard/index"
 
+  resources :calendar
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
