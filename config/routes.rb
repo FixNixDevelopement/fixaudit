@@ -1,5 +1,5 @@
 Fixaudit::Application.routes.draw do
-  get "dashboard/index"
+  resources :dashboard
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
