@@ -5,6 +5,9 @@ class CreateAudits < ActiveRecord::Migration
       t.string :audit_scope
       t.string :audit_purpose
       t.string :audit_summary
+      t.string :audit_type
+      t.string :audit_criteria
+      t.string :audit_compliance
       t.date :audit_start_date
       t.date :audit_end_date
 

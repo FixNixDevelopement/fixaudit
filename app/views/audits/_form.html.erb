@@ -1,15 +1,65 @@
-<%= form_for(@audit) do |f| %>
-<%= f.label "Title" %>
-<%= f.text_field :audit_title %>
-<%= f.label "Scope" %>
-<%= f.text_field :audit_scope %>
-<%= f.label "Purpose" %>
-<%= f.text_field :audit_purpose %>
-<%= f.label "Summary" %>
-<%= f.text_field :audit_summary %>
-<%= f.label "Start Date" %>
-<%= f.text_field :audit_start_date %>
-<%= f.label "End Date" %>
-<%= f.text_field :audit_end_date %>
-<%= f.submit %>
+<script>
+  $(function() {
+     $( "#datepicker" ).datepicker({
+      dateFormat: "yy-mm-dd"    });
+     $( "#datepicker1" ).datepicker({
+      dateFormat: "yy-mm-dd"    });     
+  });
+  </script>
+<div class="container offset well">
+<div class="panel panel-primary" >
+	<div class="panel-heading">
+		<h3 class="panel-title">Initiate Audit</h3>
+	</div>
+	<div class="panel-body">
+		<%= form_for(@audit) do |f| %>
+
+			<div class="form-group">
+			<%= f.label "Title" %>
+			<%= f.text_field :audit_title , :class =>  "form-control" %>
+			</div>
+
+			<div class="form-group">
+			<%= f.label "Scope" %>
+			<%= f.text_area :audit_scope  , :rows => 5, :cols => 25 ,    :class =>  "form-control" %>
+			</div>
+
+			<div class="form-group">
+			<%= f.label "Purpose" %>
+			<%= f.text_area :audit_purpose  , :rows => 5, :cols => 25 ,   :class =>  "form-control" %>
+			</div>
+
+			<div class="form-group">
+			<%= f.label "Summary" %>
+			<%= f.text_area :audit_summary  , :rows => 5, :cols => 25 ,  :class =>  "form-control" %>
+			</div>
+
+			<div class="form-group">
+				<%= f.label "Audit Type" %>
+				<%= f.select :audit_type, [['Select the Type ',' '],['Internal','Internal'],['External','External']] %>
+			</div>
+
+			<div class="form-group">
+				<%= f.label " Compliance Type" %>
+				<%= f.select :audit_compliance, [[' Select the compliance type ',' '],['Non Compliance','Non Compliance'],['Compliance','Compliance']] %>
+			</div>
+
+			<div class="form-group">
+				<%= f.label " Audit Criteria" %>
+				<%= f.select :audit_criteria , [[' Select the Criteria',' '],['Business Strategy','Business Strategy'],['Business Plans','Business Plans'],['Dept Targets','Dept Targets'],['Corporate Policy','Corporate Policy']] %>
+			</div>
+
+			<div class="form-group">
+			<%= f.label "Start Date" %>
+			<%= f.text_field :audit_start_date, :class =>  "date-picker" , :id => :datepicker %>
+			<%= f.label "End Date" %>
+			<%= f.text_field :audit_end_date, :class =>  "date-picker" , :id => :datepicker1 %>
+			</div>
+
+			
+
+			<%= f.submit  'Save' , :class => "btn btn-primary btn-sm"%>
 <% end %>
+</div>
+</div>
+</div>

@@ -1,4 +1,6 @@
 class AuditsController < ApplicationController
+
+  # Method for Index
 	def index
   	@audits = Audit.all
   end
@@ -13,4 +15,5 @@ class AuditsController < ApplicationController
 			redirect_to root_path
 		end
   end
+  
 end

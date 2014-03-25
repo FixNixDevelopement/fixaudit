@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require_tree .
 //= require bootstrap
+//= require highcharts
+//= require highcharts/modules/drilldown
+//= require highcharts/themes/dark-green
