@@ -1,0 +1,15 @@
+<%= form_for(@audit) do |f| %>
+<%= f.label "Title" %>
+<%= f.text_field :audit_title %>
+<%= f.label "Scope" %>
+<%= f.text_field :audit_scope %>
+<%= f.label "Purpose" %>
+<%= f.text_field :audit_purpose %>
+<%= f.label "Summary" %>
+<%= f.text_field :audit_summary %>
+<%= f.label "Start Date" %>
+<%= f.text_field :audit_start_date %>
+<%= f.label "End Date" %>
+<%= f.text_field :audit_end_date %>
+<%= f.submit %>
+<% end %>

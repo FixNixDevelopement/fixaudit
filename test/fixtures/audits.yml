@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  audit_title: MyString
+  audit_scope: MyString
+  audit_purpose: MyString
+  audit_summary: MyString
+  audit_start_date: 2014-03-25
+  audit_end_date: 2014-03-25
+
+two:
+  audit_title: MyString
+  audit_scope: MyString
+  audit_purpose: MyString
+  audit_summary: MyString
+  audit_start_date: 2014-03-25
+  audit_end_date: 2014-03-25

@@ -2,6 +2,7 @@ Fixaudit::Application.routes.draw do
 
   resources :dashboard
   resources :calendar
+  resources :audits
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
