@@ -1,11 +1,15 @@
 Fixaudit::Application.routes.draw do
 
-  get "users/index"
 
   resources :dashboard
   resources :calendar
   resources :audits
   resources :users
+  resources :departments
+  resources :locations
+
+  match '/configures' => 'configures#show', :as => 'configures'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
