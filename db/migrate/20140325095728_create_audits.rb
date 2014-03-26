@@ -10,7 +10,8 @@ class CreateAudits < ActiveRecord::Migration
       t.string :audit_compliance
       t.date :audit_start_date
       t.date :audit_end_date
-
+      t.references :departments
+      t.references :locations
       t.timestamps
     end
   end

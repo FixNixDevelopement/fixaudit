@@ -7,6 +7,8 @@ class AuditsController < ApplicationController
 
   def new
   	@audit = Audit.new
+    @department = Department.find(:all)
+    @location = Location.find(:all)
   end
 
   def create

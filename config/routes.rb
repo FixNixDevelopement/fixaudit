@@ -3,6 +3,11 @@ Fixaudit::Application.routes.draw do
   resources :dashboard
   resources :calendar
   resources :audits
+  resources :departments
+  resources :locations
+
+  match '/configures' => 'configures#show', :as => 'configures'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
