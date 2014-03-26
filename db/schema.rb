@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(:version => 20140326132734) do
     t.string   "audit_compliance"
     t.date     "audit_start_date"
     t.date     "audit_end_date"
+    t.integer  "departments_id"
+    t.integer  "locations_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end
