@@ -1,5 +1,20 @@
-<%= form_for(@department) do |f| %>
-<%= f.label "Department" %>
-<%= f.text_field :dept_name %>
-<%= f.submit %>
-<% end %>
+<div class="container offset well">
+<div class="panel panel-primary" >
+	<div class="panel-heading">
+		<h3 class="panel-title">New Department</h3>
+	</div>
+	<div class="panel-body">
+		<%= form_for(@department) do |f| %>
+
+		<div class="form-group">
+			<%= f.label "Department" %>
+			<%= f.text_field :dept_name , :class =>  "form-control" %>
+		</div>
+		<div class="form-group">
+			<%= f.submit  'Save' , :class => "btn btn-primary btn-sm"%>
+		</div>
+		
+		<% end %>
+	</div>
+</div>
+</div>
