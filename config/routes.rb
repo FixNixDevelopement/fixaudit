@@ -1,8 +1,10 @@
 Fixaudit::Application.routes.draw do
 
+
   resources :dashboard
   resources :calendar
   resources :audits
+  resources :users
   resources :departments
   resources :locations
 
