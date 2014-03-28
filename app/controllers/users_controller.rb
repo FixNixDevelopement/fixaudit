@@ -5,6 +5,9 @@ class UsersController < ApplicationController
 
   def new
   	@users = User.new
+    @team = Team.find(:all)
+    @role = Role.find(:all)
+    @department = Department.find(:all)
   end
 
   def create

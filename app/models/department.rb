@@ -3,6 +3,7 @@ class Department < ActiveRecord::Base
 
   # Relationship with other tables
   has_many :audits
+  has_many :users
   
 
 end
