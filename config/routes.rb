@@ -9,6 +9,7 @@ Fixaudit::Application.routes.draw do
   resources :locations
   resources :teams
   resources :roles
+  
 
   match '/configures' => 'configures#show', :as => 'configures'
 

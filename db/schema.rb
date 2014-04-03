@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140328113053) do
+ActiveRecord::Schema.define(:version => 20140401073708) do
 
   create_table "audits", :force => true do |t|
     t.string   "audit_title"
@@ -23,8 +23,6 @@ ActiveRecord::Schema.define(:version => 20140328113053) do
     t.string   "audit_compliance"
     t.date     "audit_start_date"
     t.date     "audit_end_date"
-    t.integer  "departments_id"
-    t.integer  "locations_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end
@@ -39,6 +37,14 @@ ActiveRecord::Schema.define(:version => 20140328113053) do
     t.string   "location_name"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "mailusers", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "login"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "roles", :force => true do |t|
@@ -56,8 +62,6 @@ ActiveRecord::Schema.define(:version => 20140328113053) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "emailid"
-    t.string   "role"
-    t.string   "team"
     t.string   "password"
     t.integer  "teams_id"
     t.integer  "departments_id"
