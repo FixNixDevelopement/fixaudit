@@ -9,7 +9,8 @@ Fixaudit::Application.routes.draw do
   resources :locations
   resources :teams
   resources :roles
-  
+  resources :mailusers
+  resources :user_mailer
 
   match '/configures' => 'configures#show', :as => 'configures'
 
